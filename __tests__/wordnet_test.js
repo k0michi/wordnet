@@ -111,6 +111,14 @@ describe('Wordnet methods', () => {
         });
     });
 
+    it('should succeed for ulteriority', () => {
+      return wordnet.lookup('ulteriority')
+        .then((result) => {
+          expect(result).toBeInstanceOf(Array);
+          expect(result).toHaveLength(1);
+        });
+    });
+
   });
 
 
